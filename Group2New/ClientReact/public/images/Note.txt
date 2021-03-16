@@ -1,0 +1,4 @@
+https://laundrapp.com/app/themes/laundrapp/resources/assets/images/dry-cleaning.svg
+https://laundrapp.com/app/themes/laundrapp/resources/assets/images/ironing.svg
+https://laundrapp.com/app/themes/laundrapp/resources/assets/images/wash.svg
+https://laundrapp.com/app/themes/laundrapp/resources/assets/images/expert-cleaning-teal.svg
