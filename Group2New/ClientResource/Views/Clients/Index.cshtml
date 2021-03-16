@@ -1,0 +1,239 @@
+﻿@model IEnumerable<ClientResource.Models.TbPatslip>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 style="color:seagreen">PAYROLL TABLE</h1>
+<p style="color:forestgreen">GO TO HOME<a href="http://localhost:3000">_LAUNDRY ONLINE COMPANY</a>.</p>
+
+@using (Html.BeginForm("Index", "Clients"))
+{
+    <input type="text" name="outlog" value="logout" style="display:none" />
+    <input type="submit" value="Go back Login" class="btn btn-danger" />
+    <i style="display:flex;justify-content:space-around;border:none">
+        <a class="btn btn-outline-primary nav-link " asp-area="" asp-controller="TbUsers" asp-action="Index">Users</a>
+        <a class="btn btn-outline-info nav-link " asp-area="" asp-controller="TbServices" asp-action="Index">Services</a>
+        <a class="btn btn-outline-warning " asp-area="" asp-controller="TbInvoices" asp-action="Index">Invoices</a>
+    </i>
+}
+
+<h3 style="color:red">@ViewBag.mess</h3>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table id="result" border="1" cellpadding="5" cellspacing="5">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Depart3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Atm4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SalMonth5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Role6)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CoefSal7)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CoefPosis8)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LiabFac9)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MarSys10)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalFac11)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AcWorkDay12)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BasicSal13)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OverSal14)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupPerDiem15)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneSup16)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TradeAllow17)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SalIncrease18)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MidSiMeal19)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BonusTet20)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalIncome21)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SociInsur22)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HeathInsur23)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnemploInsur24)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MonthlyUnFe25)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalDeductions26)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SumReceived27)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TransAtm28)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @{ double salarySum = 0; }
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Depart3)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Atm4)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SalMonth5)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Role6)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CoefSal7)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CoefPosis8)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LiabFac9)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MarSys10)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalFac11)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AcWorkDay12)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BasicSal13)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OverSal14)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SupPerDiem15)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneSup16)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TradeAllow17)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SalIncrease18)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MidSiMeal19)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BonusTet20)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalIncome21)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SociInsur22)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HeathInsur23)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnemploInsur24)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MonthlyUnFe25)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalDeductions26)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SumReceived27)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TransAtm28)
+                    @{ salarySum = salarySum + float.Parse(item.SumReceived27 ?? "0"); }
+                </td>
+                <td width="200">
+                    <div style="width: 230px; display:block">
+                        @(Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-primary" }))
+                        @(Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn btn-success" }))
+                        @(Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" }))
+                    </div>
+                </td>
+            </tr>
+        }
+        <tr>
+            <td colspan="27" align="right">
+                <span style="color:red;font-weight:bold">Sum Salary for this month (VND) </span>
+            </td>
+            <td>
+                <span style="color:red;font-weight:bold">@Html.DisplayFor(modelItem => salarySum)</span>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+
+    </tbody>
+
+</table>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#result').DataTable();
+    });
+</script>

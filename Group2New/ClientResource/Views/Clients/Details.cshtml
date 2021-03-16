@@ -1,0 +1,148 @@
+﻿@model ClientResource.Models.TbPatslip
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<h1 style="color:forestgreen">PAY SLIP TABLE</h1>
+<div>
+    <p style="color:forestgreen">GO TO HOME<a href="http://localhost:3000">_LAUNDRY ONLINE COMPANY</a>.</p>
+</div>
+
+<h4 style="color:forestgreen">Payslip Laundry Online Company</h4>
+
+<hr />
+<table cellpadding="5" cellspacing="5" border="1">
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.Id)</td>
+        <td>@Html.DisplayFor(model => model.Id)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.Password)</td>
+        <td>********</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.Name2)</td>
+        <td>@Html.DisplayFor(model => model.Name2)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.Depart3)</td>
+        <td>@Html.DisplayFor(model => model.Depart3)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.Atm4)</td>
+        <td>@Html.DisplayFor(model => model.Atm4)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.SalMonth5)</td>
+        <td>@Html.DisplayFor(model => model.SalMonth5)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.Role6)</td>
+        <td>@Html.DisplayFor(model => model.Role6)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.CoefSal7)</td>
+        <td>@Html.DisplayFor(model => model.CoefSal7)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.CoefPosis8)</td>
+        <td>@Html.DisplayFor(model => model.CoefPosis8)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.LiabFac9)</td>
+        <td>@Html.DisplayFor(model => model.LiabFac9)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.MarSys10)</td>
+        <td>@Html.DisplayFor(model => model.MarSys10)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.TotalFac11)</td>
+        <td>@Html.DisplayFor(model => model.TotalFac11)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.AcWorkDay12)</td>
+        <td>@Html.DisplayFor(model => model.AcWorkDay12)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.BasicSal13)</td>
+        <td>@Html.DisplayFor(model => model.BasicSal13) <b>[VND]</b></td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.OverSal14)</td>
+        <td>@Html.DisplayFor(model => model.OverSal14) <b>[VND]</b></td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.SupPerDiem15)</td>
+        <td>@Html.DisplayFor(model => model.SupPerDiem15) <b>[VND]</b></td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.PhoneSup16)</td>
+        <td>@Html.DisplayFor(model => model.PhoneSup16)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.TradeAllow17)</td>
+        <td>@Html.DisplayFor(model => model.TradeAllow17)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.SalIncrease18)</td>
+        <td>@Html.DisplayFor(model => model.SalIncrease18) <b>[VND]</b></td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.MidSiMeal19)</td>
+        <td>@Html.DisplayFor(model => model.MidSiMeal19) <b>[VND]</b></td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.BonusTet20)</td>
+        <td>@Html.DisplayFor(model => model.BonusTet20) <b>[VND]</b></td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.TotalIncome21)</td>
+        <td>@Html.DisplayFor(model => model.TotalIncome21) <b>[VND]</b></td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.SociInsur22)</td>
+        <td>@Html.DisplayFor(model => model.SociInsur22) <b>[VND]</b></td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.HeathInsur23)</td>
+        <td>@Html.DisplayFor(model => model.HeathInsur23) <b>[VND]</b></td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.UnemploInsur24)</td>
+        <td>@Html.DisplayFor(model => model.UnemploInsur24) <b>[VND]</b></td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.MonthlyUnFe25)</td>
+        <td>@Html.DisplayFor(model => model.MonthlyUnFe25) <b>[VND]</b></td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.TotalDeductions26)</td>
+        <td>@Html.DisplayFor(model => model.TotalDeductions26) <b>[VND]</b></td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.SumReceived27)</td>
+        <td>@Html.DisplayFor(model => model.SumReceived27) <b>[VND]</b></td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.TransAtm28)</td>
+        <td>@Html.DisplayFor(model => model.TransAtm28) <b>[VND]</b></td>
+    </tr>
+    <tr>
+        <td>Role</td>
+        <td>@Html.Encode(Model.Role6 == true ? "Leader" : "Staf")</td>
+    </tr>
+</table>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#result').DataTable();
+    });
+</script>
+
+<br />
+<br />
+<div style="clear:both" />
+
