@@ -19,7 +19,7 @@ class CartResult extends Component {
         sessionStorage.getItem("total") +
         "$ Your Services: " +
         localStorage.getItem("BASKET") +
-        " Date Order: " +
+        "| Date Order: " +
         new Date().toLocaleDateString(),
       Process: "In process",
     };
@@ -33,25 +33,67 @@ class CartResult extends Component {
       [name]: value,
     });
     //this.state.Description='Total :'+sessionStorage.getItem('total')+"$ Your Services: "+localStorage.getItem('BASKET')+" Date Order: "+new Date().toLocaleDateString();
+    var KET = [];
+    JSON.parse(localStorage.getItem("BASKET")).map(function (e) {
+      var BAS =
+        "<+> Id: " +
+        e.product.id +
+        // ", Image: " +
+        // e.product.image +
+        ", Name: " +
+        e.product.name +
+        ", Price: " +
+        e.product.price +
+        ", Rating: " +
+        e.product.rating +
+        ", Type: " +
+        e.product.type +
+        ", Quantity: " +
+        e.quantity;
+      return KET.push(BAS);
+    });
+    console.log(KET);
     this.setState({
       Description:
         "Total :" +
         sessionStorage.getItem("total") +
         "$ Your Services: " +
-        localStorage.getItem("BASKET") +
-        " Date Order: " +
+        KET +
+        // localStorage.getItem("BAS") +
+        "| Date Order: " +
         new Date().toLocaleDateString(),
     });
   };
   onSave = (e) => {
     //this.state.Description='Total :'+sessionStorage.getItem('total')+"$ Your Services: "+localStorage.getItem('BASKET')+" Date Order: "+new Date().toLocaleDateString();
+    var KET = [];
+    JSON.parse(localStorage.getItem("BASKET")).map(function (e) {
+      var BAS =
+        "<+> Id: " +
+        e.product.id +
+        // ", Image: " +
+        // e.product.image +
+        ", Name: " +
+        e.product.name +
+        ", Price: " +
+        e.product.price +
+        ", Rating: " +
+        e.product.rating +
+        ", Type: " +
+        e.product.type +
+        ", Quantity: " +
+        e.quantity;
+      return KET.push(BAS);
+    });
+
     this.setState({
       Description:
         "Total :" +
         sessionStorage.getItem("total") +
         "$ Your Services: " +
-        localStorage.getItem("BASKET") +
-        " Date Order: " +
+        KET +
+        // localStorage.getItem("BAS") +
+        "| Date Order: " +
         new Date().toLocaleDateString(),
     });
 
@@ -93,7 +135,7 @@ class CartResult extends Component {
         "content-type":
           "multipart/form-data; boundary=---011000010111000001101001",
         "x-rapidapi-key": "830f517425msh9cc0a683b01a23ap1f97dejsna758e84b893c",
-"x-rapidapi-host": "sms-voice-messages.p.rapidapi.com",
+        "x-rapidapi-host": "sms-voice-messages.p.rapidapi.com",
       },
       data:
         "Your have select services form LaundryOnline: " +
@@ -188,7 +230,7 @@ class CartResult extends Component {
                     </tr>
                   </thead>
                   <tbody>
-{this.showYouCart(basket)}
+                    {this.showYouCart(basket)}
                     <tr class="total">
                       <th scope="row">SUM</th>
                       <td>Total</td>
@@ -270,7 +312,7 @@ class CartResult extends Component {
                     placeholder
                     aria-describedby="helpId"
                     value={Sdt}
-pattern="[0-9]{10,12}"
+                    pattern="[0-9]{10,12}"
                     title="Phone numbers range from 10-12 numbers"
                     required="true"
                     onChange={this.onChange}
@@ -360,7 +402,7 @@ pattern="[0-9]{10,12}"
             <td>{basket[i].quantity}</td>
           </tr>
         );
-}
+      }
     }
     return total;
   };

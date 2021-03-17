@@ -50,23 +50,23 @@ function Userorder() {
       {List.map((e, key) => {
         return (
           <div class="alert alert-light alert-dismissible">
-            <button type="button" class="close" data-dismiss="alert">
+            <button type="button" class="close bg-white" data-dismiss="alert">
               &times;{key + 1}
             </button>
             <div class="alert alert-success">
-              <strong>Address: </strong> {e.address}
+              <strong>Address: </strong> <b>{e.address}</b>
             </div>
             <div class="alert alert-info">
-              <strong>Consignee: </strong> {e.consignee}
+              <strong>Consignee: </strong> <b>{e.consignee}</b>
             </div>
             <div class="alert alert-warning">
-              <strong>Description: </strong> {e.description}
+              <strong>Description: </strong> <b>{e.description}</b>
             </div>
             <div class="alert alert-danger">
-              <strong>Process: </strong> {e.process}
+              <strong>Process: </strong> <b>{e.process}</b>
             </div>
             <div class="alert alert-primary">
-              <strong>Telephone number: </strong> {e.sdt}
+              <strong>Telephone number: </strong> <b>{e.sdt}</b>
             </div>
             <button
               onClick={() => {
@@ -90,7 +90,7 @@ function Userorder() {
               className="btn btn-outline-red"
             >
               Delete invoice
-</button>
+            </button>
           </div>
         );
       })}
