@@ -9320,19 +9320,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PC\\.nuget\\packages\\": {}
+    "C:\\Users\\LENOVO\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Desktops\\aptech\\project3\\Group2New\\ServerLaundryOnline\\ServerLaundryOnline.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\Documents\\project3\\Group2New\\ServerLaundryOnline\\ServerLaundryOnline.csproj",
       "projectName": "ServerLaundryOnline",
-      "projectPath": "D:\\Desktops\\aptech\\project3\\Group2New\\ServerLaundryOnline\\ServerLaundryOnline.csproj",
-      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "D:\\Desktops\\aptech\\project3\\Group2New\\ServerLaundryOnline\\obj\\",
+      "projectPath": "C:\\Users\\LENOVO\\Documents\\project3\\Group2New\\ServerLaundryOnline\\ServerLaundryOnline.csproj",
+      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\LENOVO\\Documents\\project3\\Group2New\\ServerLaundryOnline\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9409,7 +9409,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   },
